@@ -8,7 +8,7 @@
 
 # <h1 align="center">**`Seguridad Vial en CABA`**</h1>
 
-Este proyecto tiene como objetivo reducir la cantidad de víctimas fatales en siniestros viales en la Ciudad de Buenos Aires (CABA) mediante el análisis de datos. Se seguirá la metodología CRISP-DM para guiar el proceso.
+Este proyecto tiene como objetivo general reducir la cantidad de víctimas fatales en siniestros viales en la Ciudad de Buenos Aires (CABA) mediante el análisis de datos.
 
 <p align='center'>
 <img src = 'https://static.lajornadaestadodemexico.com/wp-content/uploads/2022/08/Siniestros-viales.jpg' height = 500>
@@ -18,93 +18,83 @@ Este proyecto tiene como objetivo reducir la cantidad de víctimas fatales en si
 
 - **Entendiendo el Contexto y Objetivos:**
   
-  - Se busca comprender la situación actual de la seguridad vial en CABA y los objetivos del proyecto:
+  - Comprender la situación de la seguridad vial en CABA en los años 2016-2021.
   
-  - Analizar la problemática de los siniestros viales en Buenos Aires, considerando factores como el alto volumen de tráfico y la densidad poblacional.
+  - Analizar la problemática de los siniestros viales en Buenos Aires, considerando factores como la densidad poblacional y cantidad siniestros.
   
   - Analizar la información sobre la tasa de homicidios en siniestros viales y la cantidad de accidentes mortales de motociclistas en CABA.
   
   - Identificar las causas principales de los siniestros y las consecuencias para los involucrados.
   
-  - Comprender la importancia de las tasas de mortalidad relacionadas con siniestros viales como indicadores clave de seguridad vial.
+  - Representar los indicadores sobre la reduccion del 10% de la tasa de homicidios segun el semestre anterior y reduccion del 7% de la cantiada de accidentes fatales para Motocilistas y peatones.
+
+### 2. Herramientas
+
+- Microsoft Excel: para una visualización previa de los datos a ser utilizados, examinando el diccionario de datos.
+- Python: mediante la plataforma de Jupyter Notebook, para el tratamiento de datos, ETL, EDA y su disponibilización, atravez de las librerias: Pandas, Matplotlib, SeaBorn y Sqlalchemy.
+- MySQL: servidor utilizado para la disponibilización de datos estructurados para alimentar la plataforma de visualización.
+- Workbench: para la creación de base de datos estructurados y el diagrama de relaciones.
+- Power BI: presentación del proyecto junto con Dashboards dinámicos e indicadores.
+- Mark Text: para la creación/modificación del archivo Readme.md en formato markdown.
+
+### 3. Fuente de Datos
+
+- Se utilizo el Dataset Homicidios proporcionado por https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales.
+- Se Utilizo el Dataset sobre la población  proporcionado por la INDEC:
+  - [Ciudad Autónoma de Buenos Aires - Censo Nacional de Población, Hogares y Viviendas](https://censo.gob.ar/index.php/datos_definitivos_caba/)
+  - https://censo.gob.ar/wp-content/uploads/2023/11/c2022_caba_est_c2_1.xlsx
+
+### 4. Repositorio:
+
+- Carpeta 'Database': en este directorio se encuentra el archivo 'PI_DA_Diagram.mwb' el cual contiene el diagrama de relaciones de la tabla de la base de datos. el archivo 'Scripts_DB.sql' contiene el script realizado para la creación de la base de datos.
+
+- Carpeta 'Datasets':
   
-  - Reconocer la necesidad de medidas preventivas y políticas efectivas para abordar esta problemática.
+  - El archivo 'homicidios.xlsx', contiene datos sobre los siniestros y victimas registradas desde el 2016 al 2021
+  - El archivo 'c2022_caba_est_c2_1.xlsx' contiene datos sobre la población por comuna en CABA.
+  - Los archivos 'hechos.parquet', 'victimas.parquet' y 'victimasf.parquet', corresponden a los datos extraidos luego de la limpieza y estructuración del archivo 'homicidios.xlsx'.
+  - Los archivos 'poblacion.parquet' y 'comunas.parquet', corresponden a los datos extraidos luego de la limpieza y estructuración del archivo 'c2022_caba_est_c2_1.xlsx'.
 
-### 2. Comprensión de los Datos
+- Carpeta 'Dashboard', el archivo 'PI_DA.pbix' contiene la presentación y Dashboards iteractivos.
 
-- **Exploración del Dataset:**
+- Carpeta 'Notebooks':
   
-  - Revisar las hojas "hechos" y "víctimas" para entender la estructura del dataset.
+  - El archivo 'ETL.ipynb', contiene los pasos realizados para la extracción y tratamiento de los datos.
+  - El archivo 'EDA.ipynb', contiene el analisis exploratorio realizado a los datos.
+  - El archivo 'Insert_Mysql.ipynb', contiene los pasos realizados para la carga de datos a MySQL.
 
-- **Diccionarios de Datos:**
-  
-  - Consultar los diccionarios de datos para comprender el significado de las variables.
+- Carpeta 'src', contiene las imagenes presentadas en este documento.
 
-### 3. Preparación de los Datos
+- El archivo 'Contexto.md', contiene la problemática presentada junto con el contexto del proyecto desarrollado.
 
-- **Limpieza de Datos:**
-  
-  - Tratar valores faltantes, eliminar duplicados y corregir posibles errores.
+- El archivo 'LICENSE.txt', contiene el descargo de responsabilidad para la utlización del código del proyecto presentado.
 
-- **Integración de Datos:**
-  
-  - Integrar datos de las hojas "hechos" y "víctimas" según sea necesario.
+- El archivo 'Readme.md', el presente documento.
 
-### 4. Análisis Exploratorio de Datos (EDA)
+### 4. Metodologias:
 
-- **Identificar Patrones y Tendencias:**
-  - Realizar un EDA para descubrir patrones, tendencias y posibles factores contribuyentes a los siniestros viales y sus consecuencias.
+- Analisis Exploratorio: para identificar valores atipitos y tendencias utiles para el desarrollo del dashboard.
+- Analisis Descriptivo: para las visualizaciones en los dashboards interactivos, ayudando a obtener el valor buscado en los datos.
+- Analisis Predictivo: recomendaciones segun datos y valores observados en los dashboards.
 
-### 5. Modelado
+### 5. Análisis Exploratorio de Datos (EDA)
 
-- **Calcular la Tasa de Homicidios:**
-  
-  - Utilizar la fórmula proporcionada para calcular la tasa de homicidios en siniestros viales.
+<img title="" src="file:///C:/PI_DA-PT/src/DA1.PNG" alt="">
 
-- **Evaluar la Evolución de Accidentes de Motociclistas:**
-  
-  - Calcular y evaluar la evolución de la cantidad de accidentes mortales de motociclistas según la fórmula dada.
+- Encontramos una ligera tendencia bajista año tras año, sin embargo en los ultimos 3 años de la cantidad de victimas el 100% son fatales.
 
-### 6. Diseño del Dashboard
+<img title="" src="file:///C:/PI_DA-PT/src/DA2.PNG" alt="">
 
-- **Utilizar Herramientas de Visualización:**
-  
-  - Emplear herramientas como Tableau, Power BI o matplotlib/seaborn en Python para crear un dashboard.
+- En el tipo de calle AVENIDA se concentra la mayor cantidad de siniestros, punto  a tener encuenta para las recomendaciones viales.
 
-- **Representar Gráficamente:**
-  
-  - Graficar la tasa de homicidios en siniestros viales y la cantidad de accidentes mortales de motociclistas.
+<img title="" src="file:///C:/PI_DA-PT/src/DA3.PNG" alt="">
 
-- **Incluir KPIs:**
-  
-  - Agregar KPIs al dashboard para medir la reducción del 10% en la tasa de homicidios y del 7% en la cantidad de accidentes mortales de motociclistas.
+- El indicador propuesto de reducir el 10% la tasa de homicidios vemos que se cumplido respecto al ultimo semeste del año 2021 por lo que las medidas y policiticas de seguridad vial arrojaron un resultado positivo, se debe continuar con estas.
 
-### 7. Propuesta y Medición del Tercer KPI
+<img title="" src="file:///C:/PI_DA-PT/src/DA4.PNG" alt="">
 
-- **Proponer un Tercer KPI:**
-  
-  - Identificar un tercer KPI relevante, como la velocidad promedio en zonas de alto riesgo.
+- Para este indicador vemos que no se logro el objetivo de reducir un 7% la cantidad de accidentes fatales en las victimas de motocicletas por lo que se debe de reforzar el control de normas de seguridad como el uso de casco y chaleco reflectivo.
 
-- **Medir y Graficar:**
-  
-  - Calcular y graficar el tercer KPI para evaluar su evolución y su relación con los siniestros viales.
+<img title="" src="file:///C:/PI_DA-PT/src/DA5.PNG" alt="">
 
-### 8. Validación y Ajuste
-
-- **Validar Resultados:**
-  
-  - Consultar con expertos en seguridad vial y autoridades locales para validar los resultados.
-
-- **Ajustar el Análisis y el Dashboard:**
-  
-  - Realizar ajustes según el feedback recibido.
-
-### 9. Presentación de Resultados
-
-- **Preparar una Presentación:**
-  
-  - Destacar hallazgos, recomendaciones y acciones sugeridas para reducir la cantidad de víctimas fatales en siniestros viales.
-
-- **Colaboración con Expertos y Autoridades:**
-  
-  - Destacar la importancia de la colaboración continua con expertos en seguridad vial y autoridades locales.
+- Para este indicador vemos que no esta cerca de lograrse el objetivo de reducir un 7% la cantidad de victimas fatales de peatones, por lo que se recomienda reforzar la educación vial tanto de peatones como de pasajeros.
