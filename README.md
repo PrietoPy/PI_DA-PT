@@ -41,8 +41,9 @@ Este proyecto tiene como objetivo general reducir la cantidad de víctimas fatal
 
 - Se utilizo el Dataset Homicidios proporcionado por https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales.
 - Se Utilizo el Dataset sobre la población  proporcionado por la INDEC:
-  - [Ciudad Autónoma de Buenos Aires - Censo Nacional de Población, Hogares y Viviendas](https://censo.gob.ar/index.php/datos_definitivos_caba/)
   - https://censo.gob.ar/wp-content/uploads/2023/11/c2022_caba_est_c2_1.xlsx
+
+- 
 
 ### 4. Repositorio:
 
@@ -75,26 +76,32 @@ Este proyecto tiene como objetivo general reducir la cantidad de víctimas fatal
 
 - Analisis Exploratorio: para identificar valores atipitos y tendencias utiles para el desarrollo del dashboard.
 - Analisis Descriptivo: para las visualizaciones en los dashboards interactivos, ayudando a obtener el valor buscado en los datos.
-- Analisis Predictivo: recomendaciones segun datos y valores observados en los dashboards.
+- Analisis Espacial: para localizar los puntos de las arterias viales donde ocurren mayor cantidad de siniestros.
 
-### 5. Análisis Exploratorio de Datos (EDA)
+### 5. Base de datos
 
-<img title="" src="file:///C:/PI_DA-PT/src/DA1.PNG" alt="">
+- Diagrama de relacion de tablas
+  
+  <img src="src/DA_DB.PNG">
+
+### 6. Análisis Exploratorio de Datos (EDA)
+
+<img src="src/DA1.PNG">
 
 - Encontramos una ligera tendencia bajista año tras año, sin embargo en los ultimos 3 años de la cantidad de victimas el 100% son fatales.
 
-<img title="" src="file:///C:/PI_DA-PT/src/DA2.PNG" alt="">
+<img src="src/DA2.PNG">
 
 - En el tipo de calle AVENIDA se concentra la mayor cantidad de siniestros, punto  a tener encuenta para las recomendaciones viales.
 
-<img title="" src="file:///C:/PI_DA-PT/src/DA3.PNG" alt="">
+<img src="src/DA3.PNG">
 
 - El indicador propuesto de reducir el 10% la tasa de homicidios vemos que se cumplido respecto al ultimo semeste del año 2021 por lo que las medidas y policiticas de seguridad vial arrojaron un resultado positivo, se debe continuar con estas.
 
-<img title="" src="file:///C:/PI_DA-PT/src/DA4.PNG" alt="">
+<img src="src/DA4.PNG">
 
 - Para este indicador vemos que no se logro el objetivo de reducir un 7% la cantidad de accidentes fatales en las victimas de motocicletas por lo que se debe de reforzar el control de normas de seguridad como el uso de casco y chaleco reflectivo.
 
-<img title="" src="file:///C:/PI_DA-PT/src/DA5.PNG" alt="">
+<img src="src/DA5.PNG">
 
 - Para este indicador vemos que no esta cerca de lograrse el objetivo de reducir un 7% la cantidad de victimas fatales de peatones, por lo que se recomienda reforzar la educación vial tanto de peatones como de pasajeros.
